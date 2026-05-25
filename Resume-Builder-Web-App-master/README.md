@@ -1,89 +1,94 @@
-# 📑 Resume Builder Web App
+# Resume Builder Web App
 
-An awesome Resume Builder web app. User can register any social service by logging into it. User can log in with gmail are registering with a manual email. User can Creating a Professional Resume and Print it.
+A React-based resume builder web application with live preview, customizable color presets, form-guided input, Firebase authentication, and print/download support.
 
+## Overview
 
-## 🚀 Important Links
+This project provides an interactive resume creation experience. Users can enter personal details, education, experience, skills, certifications, projects, and more on the left side and see a live resume preview on the right. The app supports email/password signup and Google authentication via Firebase.
 
-- [Live Website](https://resume-builder-bd.web.app/)
-- [Project Proposal](https://drive.google.com/file/d/1wjUupz3V52tfxB4uFbuCh7uEsVX8WEcM/view?usp=sharing)
-- [Project Documentation](https://drive.google.com/file/d/1zkSioSj1OojEsuJZSpw6hbFIDbqAAMU5/view?usp=sharing)
+## Key Features
 
-## 💎 Features :
+- Landing page with Hero, About, Features, Templates, Review, Contact, and Footer sections
+- Email/password registration and login
+- Google sign-in with Firebase authentication
+- Resume builder page with live preview
+- Download/print resume using `react-to-print`
+- Prebuilt resume sections for contact, objective, education, experience, certifications, skills, tools, interests, projects, workshops, activities, languages, and references
+- Color preset selection for resume styling
 
-* This web app provide an easy way of creating professional looking resume.
-* User just have to fill up a from that specifies question from all required fields.
-* There are also suggestion points in every fields for user to give
-professional hints.
-* The system automatically generates a well structured resume and user can
-download or print his/her resume.
+## Technologies
 
-## 🛠 Front-end Thechnology : 
-* React.js
-* Context-API
-* Bootstrap4
-* SCSS
-* Firebase
+- React
+- React Router
+- React Hook Form
+- Firebase Authentication
+- Bootstrap 4
+- SCSS
+- react-to-print
 
----
+## Installation
 
-> ### Install
-``` 
- npm install
-```
-> ### Build
-``` 
- npm run build
-```
-> ### Start
+From the project root:
 
-``` 
- npm start
+```bash
+cd "c:\Users\shiwa\OneDrive\Desktop\resume builder web app\Resume-Builder-Web-App-master"
+npm install
 ```
 
-## 🗃️ Problem Scenario: 
+## Development
 
-In our country, computer science graduates say that there are no jobs in Bangladesh and on the other hand, recruiters who will hire people in software companies say that they are not finding skilful suitable candidates. Now a days this is a common problem in our country. I have seen a lot of time around in different job groups on Facebook and LinkedIn that a lot of people are posting and saying job seekers are don't know about resume format, they use a ridiculous email address, don’t include contact information spelling and grammar mistake, they don’t know about fonts size, use multiple fonts with multiple colour, they use misleading information and too much personal information, don’t know about photograph format, not provide job position related skills or experience information, they don’t know about job responsibilities and company profile etc. 
+Start the development server:
 
-Most candidates make the biggest mistake of copying someone else's resume. The resume is the coordinating medium between Job Seeker and Job Recruiter. So as a result of not creating the resume properly, many times they do not get the call for the interview, they are rejected in the resume filter phase. So I want to create a web application where anyone can easily create the perfect resume for every job position.
+```bash
+npm start
+```
 
-## 💡 Problem Statement: 
+## Build
 
-So the problems that can be found from the above scenario are:
+Create a production build:
 
-   • Candidates are don't know about resume format.
-   
-   • They use a unprofessional email address
-   
-   • They don’t include contact information
-   
-   • In resume they do spelling and grammar mistake
-   
-   • They use multiple fonts and multiple colour
-   
-   • Don’t know about fonts size
-   
-   • Not provide job position related skills or experience information
-   
-   • Don’t know about photograph format
-   
-   • They use misleading information
-   
-   • Don’t know about cover latter
-   
-   • They use too much personal information
-   
-   • They don’t know about job responsibilities and company profile 
-   
-   • They don’t highlight training, certifications, awards 
-   
-   • They don’t action verb in summery and use bad objective
-   
-   •  Using the same resume for multiple job applications
-   
-   • They copy others resume information
-   
-    
-## 🔥 Proposed Solution
+```bash
+npm run build
+```
 
-The system will developed to provide an easy way of creating a professional looking resume. Users just have to fill up a form that specifies questions from all required fields such as personal questions, educational, qualities, interest, skills and so on. There are also suggestion points for users to give professional hints. The answers provided by the users are stored and the system automatically generates a well-structured resume. Users have option to choose any type of resume template.
+## Project Structure
+
+- `public/` — static HTML and metadata
+- `src/` — application source code
+  - `App.js` — main router and page layout
+  - `data.json` — default resume data model
+  - `components/` — reusable UI and page components
+  - `styles/` — SCSS styles
+
+## Authentication
+
+The app uses Firebase Authentication for:
+
+- Email/password sign up
+- Email/password sign in
+- Google sign in
+
+> Note: The Firebase configuration file is not included in this repo. Create `src/firebase.config.js` with your Firebase project settings.
+
+Example:
+
+```js
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+export default firebaseConfig;
+```
+
+## Usage
+
+1. Open the landing page at `/`
+2. Go to `/login` to sign in or register
+3. Visit `/resume-builder` to create your resume
+4. Use the `Download / Print` button to export the resume
+
